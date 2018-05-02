@@ -1,16 +1,15 @@
 ﻿using Core;
 using NWN.Plugin.Framework.Registration;
-using static NWN.NWScript;
 
 // ReSharper disable once CheckNamespace
 namespace NWN.Scripts
 {
-    internal class mod_on_user
+    internal class mod_on_chat
     {
         // ReSharper disable once UnusedMember.Local
-        static void Main()
+        private static void Main()
         {
-            PluginRegistrar.RunRegisteredEvents(RegistrationEventType.OnModuleUserDefined);
+            PluginRegistrar.RunRegisteredEvents(RegistrationEventType.OnModuleChat);
         }
     }
 }

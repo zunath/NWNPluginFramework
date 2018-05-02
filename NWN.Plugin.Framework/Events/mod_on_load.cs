@@ -1,12 +1,11 @@
-﻿using System;
-using Core;
+﻿using Core;
 using NWN.Plugin.Framework.Registration;
 using static NWN.NWScript;
 
 // ReSharper disable once CheckNamespace
 namespace NWN.Scripts
 {
-    class mod_on_load
+    internal class mod_on_load
     {
         // ReSharper disable once UnusedMember.Local
         private static void Main()

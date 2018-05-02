@@ -1,16 +1,15 @@
 ﻿using Core;
 using NWN.Plugin.Framework.Registration;
-using static NWN.NWScript;
 
 // ReSharper disable once CheckNamespace
 namespace NWN.Scripts
 {
-    class mod_on_unequip
+    internal class mod_on_levelup
     {
         // ReSharper disable once UnusedMember.Local
-        static void Main()
+        private static void Main()
         {
-            PluginRegistrar.RunRegisteredEvents(RegistrationEventType.OnModuleUnequipItem);
+            PluginRegistrar.RunRegisteredEvents(RegistrationEventType.OnModuleLevelUp);
         }
     }
 }

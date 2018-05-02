@@ -1,5 +1,6 @@
 ﻿using System;
 using NWN.Plugin.Framework;
+using NWN.Plugin.Framework.Registration;
 
 namespace PluginTest
 {

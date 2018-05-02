@@ -40,13 +40,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\mod_on_acquire.cs" />
+    <Compile Include="Events\mod_on_activate.cs" />
+    <Compile Include="Events\mod_on_chat.cs" />
+    <Compile Include="Events\mod_on_csabort.cs" />
+    <Compile Include="Events\mod_on_death.cs" />
+    <Compile Include="Events\mod_on_dying.cs" />
+    <Compile Include="Events\mod_on_enter.cs" />
+    <Compile Include="Events\mod_on_equip.cs" />
+    <Compile Include="Events\mod_on_heartbeat.cs" />
+    <Compile Include="Events\mod_on_leave.cs" />
+    <Compile Include="Events\mod_on_levelup.cs" />
+    <Compile Include="Events\mod_on_load.cs" />
+    <Compile Include="Events\mod_on_respawn.cs" />
+    <Compile Include="Events\mod_on_rest.cs" />
+    <Compile Include="Events\mod_on_unacquire.cs" />
+    <Compile Include="Events\mod_on_unequip.cs" />
+    <Compile Include="Events\mod_on_user.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="IModuleRegistration.cs" />
     <Compile Include="NWN\INTERNAL_Events.cs" />
     <Compile Include="NWN\INTERNAL_Internal.cs" />
     <Compile Include="NWN\INTERNAL_nwscript.cs" />
     <Compile Include="NWN\INTERNAL_nwscript.intrinsics.cs" />
     <Compile Include="NWN\INTERNAL_Types.cs" />
+    <Compile Include="PluginRegistrar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationEventType.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="BuildingNugetPackageReadme.txt" />
@@ -60,4 +80,8 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)NWN.Plugin.Framework.dll" "C:/nwn-ee/mono/NWN.Plugin.Framework.dll*" /E /Y /C
+</PostBuildEvent>
+  </PropertyGroup>
 </Project>
