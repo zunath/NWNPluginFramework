@@ -11,6 +11,7 @@
     <AssemblyName>PluginTest</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NWN.Plugin.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zunath.NWN.Plugin.Framework.0.0.7\lib\net461\NWN.Plugin.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,21 +45,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ModuleRegistration.cs" />
-    <Compile Include="MyPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj">
-      <Project>{f528d64a-b33c-4b53-984b-6f8d3cc2790a}</Project>
-      <Name>Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Registration\Registration.csproj">
-      <Project>{fd6f53be-814b-43d9-812e-6af91baa908a}</Project>
-      <Name>Registration</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)*.dll" "C:/nwn-ee/mono" /E /Y /C</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(TargetDir)PluginTest.dll" "C:/nwn-ee/mono" /E /Y /C
+</PostBuildEvent>
   </PropertyGroup>
 </Project>

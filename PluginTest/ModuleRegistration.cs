@@ -1,5 +1,5 @@
 ﻿using System;
-using Registration;
+using NWN.Plugin.Framework;
 
 namespace PluginTest
 {
@@ -50,6 +50,16 @@ namespace PluginTest
             
         }
 
+        public void OnModuleEquipItem()
+        {
+            
+        }
+
+        public void OnModuleHeartbeat()
+        {
+
+        }
+
         public void OnModuleLeave()
         {
             
@@ -60,11 +70,9 @@ namespace PluginTest
             
         }
 
-        public bool OnModuleLoad(string[] args)
+        public void OnModuleLoad()
         {
             Console.WriteLine("Hello from my module registration");
-
-            return true;
         }
 
         public void OnModuleRespawn()
