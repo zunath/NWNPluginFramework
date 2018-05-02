@@ -1,6 +1,7 @@
 ﻿using System;
 using NWN.Plugin.Framework;
-using NWN.Plugin.Framework.Registration;
+using static NWN.NWScript;
+using Object = NWN.Object;
 
 namespace PluginTest
 {
@@ -13,7 +14,7 @@ namespace PluginTest
 
         public void OnShutdown()
         {
-            
+
         }
 
         public void OnModuleAcquireItem()

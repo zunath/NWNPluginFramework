@@ -32,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NWN.Plugin.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zunath.NWN.Plugin.Framework.0.0.8\lib\net461\NWN.Plugin.Framework.dll</HintPath>
+      <HintPath>..\packages\Zunath.NWN.Plugin.Framework.0.0.9\lib\net461\NWN.Plugin.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

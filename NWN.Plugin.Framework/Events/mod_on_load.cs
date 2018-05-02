@@ -1,5 +1,4 @@
-﻿using Core;
-using NWN.Plugin.Framework.Registration;
+﻿using NWN.Plugin.Framework;
 using static NWN.NWScript;
 
 // ReSharper disable once CheckNamespace

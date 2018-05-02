@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Core;
 
-namespace NWN.Plugin.Framework.Registration
+namespace NWN.Plugin.Framework
 {
     static class PluginRegistrar
     {
         private static readonly Dictionary<RegistrationEventType, List<Action>> _registeredEvents = new Dictionary<RegistrationEventType, List<Action>>();
         private static bool _isLoaded;
         
-        public static void LoadPlugins()
+        internal static void LoadPlugins()
         {
             if (_isLoaded)
             {
@@ -31,7 +30,7 @@ namespace NWN.Plugin.Framework.Registration
             
             Console.WriteLine("Looking for plugins in: " + directory);
             List<string> plugins = Directory.GetFiles(directory).ToList();
-            string[] exclusions = {"NWN.Plugin.Framework.dll", "NWN.Plugin.Framework.Registration.dll"};
+            string[] exclusions = {"NWN.Plugin.Framework.dll"};
             
             for(int index = plugins.Count-1; index >= 0; index--)
             {
@@ -61,8 +60,6 @@ namespace NWN.Plugin.Framework.Registration
                     
                     foreach (var type in registrationTypes)
                     {
-                        Console.WriteLine("instance = " + type.FullName);
-
                         IModuleRegistration registration = (IModuleRegistration)Activator.CreateInstance(type);
                         
                         _registeredEvents[RegistrationEventType.OnModuleAcquireItem].Add(registration.OnModuleAcquireItem);
@@ -91,12 +88,10 @@ namespace NWN.Plugin.Framework.Registration
             _isLoaded = true;
         }
 
-        public static void RunRegisteredEvents(RegistrationEventType type)
+        internal static void RunRegisteredEvents(RegistrationEventType type)
         {
             var registrations = _registeredEvents[type];
-
-            Console.WriteLine(" reggys = " + registrations.Count);
-
+            
             foreach (var registration in registrations)
             {
                 registration.Invoke();

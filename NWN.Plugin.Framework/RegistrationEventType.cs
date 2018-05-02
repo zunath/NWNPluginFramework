@@ -1,4 +1,4 @@
-﻿namespace Core
+﻿namespace NWN.Plugin.Framework
 {
     enum RegistrationEventType
     {
