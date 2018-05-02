@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FDF3852B-714E-4B8C-A6F3-E6287BEB815C}</ProjectGuid>
+    <ProjectGuid>{FD6F53BE-814B-43D9-812E-6AF91BAA908A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NWNXMono</RootNamespace>
-    <AssemblyName>NWNXMono</AssemblyName>
+    <RootNamespace>Registration</RootNamespace>
+    <AssemblyName>Registration</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,11 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="INTERNAL_Events.cs" />
-    <Compile Include="INTERNAL_Internal.cs" />
-    <Compile Include="INTERNAL_nwscript.cs" />
-    <Compile Include="INTERNAL_nwscript.intrinsics.cs" />
-    <Compile Include="INTERNAL_Types.cs" />
+    <Compile Include="IModuleRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,5 +1,5 @@
 ﻿using System;
-using PluginTest;
+using System.Reflection;
 using static NWN.NWScript;
 
 // ReSharper disable once CheckNamespace
@@ -10,13 +10,9 @@ namespace NWN.Scripts
         // ReSharper disable once UnusedMember.Local
         private static void Main()
         {
-            Console.WriteLine("Firing from C#");
+            Console.WriteLine("Firing from C# again");
             //SendMessageToPC(GetFirstPC(), "Hello from C#");
-            
-            MyPlugin mp = new MyPlugin();
-
-            mp.Test();
         }
-        
+
     }
 }

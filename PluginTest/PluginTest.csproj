@@ -40,14 +40,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModuleRegistration.cs" />
     <Compile Include="MyPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NWNXMono\NWNXMono.csproj">
-      <Project>{fdf3852b-714e-4b8c-a6f3-e6287beb815c}</Project>
-      <Name>NWNXMono</Name>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{f528d64a-b33c-4b53-984b-6f8d3cc2790a}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Registration\Registration.csproj">
+      <Project>{fd6f53be-814b-43d9-812e-6af91baa908a}</Project>
+      <Name>Registration</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)*.dll" "C:/nwn-ee/mono" /E /Y /C</PostBuildEvent>
+  </PropertyGroup>
 </Project>

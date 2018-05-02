@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Delegates.cs" />
     <Compile Include="Events\mod_on_acquire.cs" />
     <Compile Include="Events\mod_on_activate.cs" />
     <Compile Include="Events\mod_on_chat.cs" />
@@ -58,25 +59,27 @@
     <Compile Include="Events\mod_on_unequip.cs" />
     <Compile Include="Events\mod_on_user.cs" />
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="NWN\INTERNAL_Events.cs" />
+    <Compile Include="NWN\INTERNAL_Internal.cs" />
+    <Compile Include="NWN\INTERNAL_nwscript.cs" />
+    <Compile Include="NWN\INTERNAL_nwscript.intrinsics.cs" />
+    <Compile Include="NWN\INTERNAL_Types.cs" />
+    <Compile Include="PluginRegistrar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationEventType.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NWNXMono\NWNXMono.csproj">
-      <Project>{fdf3852b-714e-4b8c-a6f3-e6287beb815c}</Project>
-      <Name>NWNXMono</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PluginTest\PluginTest.csproj">
-      <Project>{c617dee7-f7ff-4874-881b-6ec28c649d1f}</Project>
-      <Name>PluginTest</Name>
+    <ProjectReference Include="..\Registration\Registration.csproj">
+      <Project>{fd6f53be-814b-43d9-812e-6af91baa908a}</Project>
+      <Name>Registration</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>$(SolutionDir)/packages/ILMerge.2.14.1208/tools/ilmerge.exe /out:NWNPluginFramework.dll "./*.dll"
+    <PostBuildEvent>$(SolutionDir)/packages/ILMerge.2.14.1208/tools/ilmerge.exe /out:NWNPluginFramework.dll "./Core.dll"
 
 xcopy "$(TargetDir)NWNPluginFramework.dll" "C:/nwn-ee/mono" /E /Y /C</PostBuildEvent>
   </PropertyGroup>

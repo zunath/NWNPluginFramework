@@ -1,4 +1,6 @@
-﻿using static NWN.NWScript;
+﻿using System;
+using Core;
+using static NWN.NWScript;
 
 // ReSharper disable once CheckNamespace
 namespace NWN.Scripts
@@ -8,6 +10,9 @@ namespace NWN.Scripts
         // ReSharper disable once UnusedMember.Local
         private static void Main()
         {
+            PluginRegistrar registrar = new PluginRegistrar();
+            registrar.LoadPlugins();
+
             SetEventScript(GetModule(), EVENT_SCRIPT_MODULE_ON_ACQUIRE_ITEM, "mod_on_acquire");
             SetEventScript(GetModule(), EVENT_SCRIPT_MODULE_ON_ACTIVATE_ITEM, "mod_on_activate");
             SetEventScript(GetModule(), EVENT_SCRIPT_MODULE_ON_CLIENT_ENTER, "mod_on_enter");
@@ -26,6 +31,8 @@ namespace NWN.Scripts
             SetEventScript(GetModule(), EVENT_SCRIPT_MODULE_ON_USER_DEFINED_EVENT, "mod_on_user");
 
             ExecuteScript("x2_mod_def_load", Object.OBJECT_SELF);
+
+            registrar.RunRegisteredEvents(RegistrationEventType.OnModuleLoad);
         }
     }
 }
