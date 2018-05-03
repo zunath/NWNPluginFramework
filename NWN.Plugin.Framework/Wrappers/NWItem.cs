@@ -39,5 +39,7 @@ namespace NWN.Plugin.Framework.Wrappers
             get => GetItemStackSize(this);
             set => SetItemStackSize(this, value);
         }
+
+        public float Weight => GetWeight(this) * 0.1f;
     }
 }

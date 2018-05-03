@@ -43,6 +43,10 @@ namespace NWN.Plugin.Framework.Wrappers
             set => AssignCommand(this, () => SetFacing(value));
         }
 
+        public int CurrentHP => GetCurrentHitPoints(this);
+
+        public int MaxHP => GetMaxHitPoints(this);
+
         public int GetLocalInt(string name)
         {
             return NWScript.GetLocalInt(this, name);

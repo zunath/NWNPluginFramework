@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Zunath.NWN.Plugin.Framework</id>
-    <version>0.0.9</version>
+    <version>0.0.11</version>
     <title>Neverwinter Nights Plugin Framework</title>
     <authors>Zunath</authors>
     <owners>Zunath</owners>

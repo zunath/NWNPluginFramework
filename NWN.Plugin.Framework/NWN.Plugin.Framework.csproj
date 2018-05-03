@@ -67,6 +67,7 @@
     <Compile Include="PluginRegistrar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrationEventType.cs" />
+    <Compile Include="Wrappers\NWCreature.cs" />
     <Compile Include="Wrappers\NWItem.cs" />
     <Compile Include="Wrappers\NWObject.cs" />
   </ItemGroup>
@@ -80,7 +81,9 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Constants\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy "$(TargetDir)NWN.Plugin.Framework.dll" "C:/nwn-ee/mono/NWN.Plugin.Framework.dll*" /E /Y /C
