@@ -67,6 +67,8 @@
     <Compile Include="PluginRegistrar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrationEventType.cs" />
+    <Compile Include="Wrappers\NWItem.cs" />
+    <Compile Include="Wrappers\NWObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="BuildingNugetPackageReadme.txt" />
