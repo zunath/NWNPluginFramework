@@ -29,7 +29,7 @@ namespace NWN.Plugin.Framework
             if (string.IsNullOrWhiteSpace(directory)) return;
             
             Console.WriteLine("Looking for plugins in: " + directory);
-            List<string> plugins = Directory.GetFiles(directory).ToList();
+            List<string> plugins = Directory.GetFiles(directory, "*.dll").ToList();
             string[] exclusions = {"NWN.Plugin.Framework.dll"};
             
             for(int index = plugins.Count-1; index >= 0; index--)
