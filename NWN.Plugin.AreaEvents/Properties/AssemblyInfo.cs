@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PluginTest")]
+[assembly: AssemblyTitle("NWN.Plugin.AreaEvents")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PluginTest")]
+[assembly: AssemblyProduct("NWN.Plugin.AreaEvents")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c617dee7-f7ff-4874-881b-6ec28c649d1f")]
+[assembly: Guid("4d75ef09-db8f-44cd-bc24-412bfbd082fb")]
 
 // Version information for an assembly consists of the following four values:
 //

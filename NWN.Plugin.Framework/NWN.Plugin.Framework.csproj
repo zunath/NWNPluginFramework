@@ -58,7 +58,7 @@
     <Compile Include="Events\mod_on_unequip.cs" />
     <Compile Include="Events\mod_on_user.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="IModuleRegistration.cs" />
+    <Compile Include="IPluginRegistration.cs" />
     <Compile Include="NWN\INTERNAL_Events.cs" />
     <Compile Include="NWN\INTERNAL_Internal.cs" />
     <Compile Include="NWN\INTERNAL_nwscript.cs" />
@@ -86,7 +86,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)NWN.Plugin.Framework.dll" "C:/nwn-ee/mono/NWN.Plugin.Framework.dll*" /E /Y /C
-</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -1,6 +1,6 @@
 ﻿namespace NWN.Plugin.Framework
 {
-    enum RegistrationEventType
+    internal enum RegistrationEventType
     {
         OnModuleAcquireItem,
         OnModuleActivateItem,
@@ -19,6 +19,5 @@
         OnModuleUnacquireItem,
         OnModuleUnequipItem,
         OnModuleUserDefined
-
     }
 }

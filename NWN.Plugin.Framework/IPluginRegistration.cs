@@ -1,6 +1,6 @@
 ﻿namespace NWN.Plugin.Framework
 {
-    public interface IModuleRegistration
+    public interface IPluginRegistration
     {
         void OnRegisterPlugin();
         void OnShutdown();

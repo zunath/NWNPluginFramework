@@ -51,7 +51,7 @@ namespace NWN.Plugin.Framework
                     {
                         foreach (var i in x.GetInterfaces())
                         {
-                            if (i == typeof(IModuleRegistration))
+                            if (i == typeof(IPluginRegistration))
                             {
                                 registrationTypes.Add(x);
                             }
@@ -60,7 +60,7 @@ namespace NWN.Plugin.Framework
                     
                     foreach (var type in registrationTypes)
                     {
-                        IModuleRegistration registration = (IModuleRegistration)Activator.CreateInstance(type);
+                        IPluginRegistration registration = (IPluginRegistration)Activator.CreateInstance(type);
                         
                         _registeredEvents[RegistrationEventType.OnModuleAcquireItem].Add(registration.OnModuleAcquireItem);
                         _registeredEvents[RegistrationEventType.OnModuleActivateItem].Add(registration.OnModuleActivateItem);

@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C617DEE7-F7FF-4874-881B-6EC28C649D1F}</ProjectGuid>
+    <ProjectGuid>{4D75EF09-DB8F-44CD-BC24-412BFBD082FB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PluginTest</RootNamespace>
-    <AssemblyName>PluginTest</AssemblyName>
+    <RootNamespace>NWN.Plugin.AreaEvents</RootNamespace>
+    <AssemblyName>NWN.Plugin.AreaEvents</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NWN.Plugin.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zunath.NWN.Plugin.Framework.0.0.9\lib\net461\NWN.Plugin.Framework.dll</HintPath>
+      <HintPath>..\packages\Zunath.NWN.Plugin.Framework.0.0.14\lib\net461\NWN.Plugin.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,15 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModuleRegistration.cs" />
+    <Compile Include="PluginRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)PluginTest.dll" "C:/nwn-ee/mono" /E /Y /C
-</PostBuildEvent>
-  </PropertyGroup>
 </Project>
